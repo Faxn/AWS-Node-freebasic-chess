@@ -1,0 +1,32 @@
+//Logical If Operations
+//Psuedocode for determining valid move sets.
+
+
+	//FUNCTION Submit_Move begins here: input taken from HTML page
+
+//Player 1 submits a move containing the following information (Square 1, Square 2, Player 1 Color)
+
+//IF boxes = 2, move is valid (for now)
+
+//Abbreviated as (S1, S2, P1c)
+
+//The first check to be performed before determining if a given peice can move to a certain square is parsing information from the board.
+
+
+//Pull the contents of S1 and S2. 
+
+//If the color of S1's peice OR S2's peice (but not both) is = P1c, the move is legal.
+	//Otherwise, player has selected two empty squares or is attempting to move their peices onto each other.
+
+//Otherwise, the move passes the check, and another function is called to see if the move is valid for the peice with color = P1c.
+
+	//FUNCTION Movement Check (Input: Peice Type, Origin_Square, Destination_Square)
+//For now, our main concern is that the move is legal for peice_type
+//Later iterations can include more complicated functions such as _out of bounds, castling, en_passant, promotion (form of all possible peices)
+
+
+
+	//Function Move/Capture
+//If above functions are valid, overwrite the contents of the destination square with the contents of the source square, then clear the source square.
+//(Later iterations) If destination square contains a king, player making the move wins the game.
+	 
