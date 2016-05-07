@@ -13,7 +13,7 @@ var app = express();
 app.use(serveStatic('public/'));
 
 //host the server
-app.set('port', 8080);
+app.set('port', 8094);
 var server = http.createServer(app);
 server.listen(app.get('port'), function (){});
-console.log('Server running at ????:'+8080);
+console.log('Server running at ????:'+8094);
