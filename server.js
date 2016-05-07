@@ -1,6 +1,10 @@
 var http = require('http'),
     express = require('express'),
-    serveStatic = require('serve-static')
+    serveStatic = require('serve-static'),
+    pieces = require('./pieces.js'),
+    board = require('./board.js')
+
+board = new board.mailbox();
     
 // configure the app
 var app = express();
