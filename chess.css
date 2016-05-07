@@ -1,0 +1,15 @@
+.white-box{
+    width: 25%;padding-bottom: 25%;background-color: #fff; float: left;margin: 5%
+}
+.Board{
+    height:0;width: 25%;padding-bottom: 25%;background-color: #eee; float: left;margin: 5% 5% 5% 0;overflow:hidden;"
+}
+.black-space{
+    width: 25%;padding-bottom: 25%;background-color: #888; float: left;margin: 5%;"
+}
+.white-space{
+    width: 25%;padding-bottom: 25%;background-color: #fff; float: left;margin: 5%;"
+}
+.check{
+    display
+}
