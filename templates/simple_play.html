@@ -1,0 +1,20 @@
+
+
+<h2>board</h2>
+
+{{#unless turn}}
+White Player's move
+{{else}}
+Black Player's move
+{{/unless}}
+
+{{ar}}<br>
+
+<form action='move'>
+<input type=number name=a min=0 max=63>
+<input type=number name=b min=0 max=63>
+<input type=submit>
+	
+</form>
+
+
