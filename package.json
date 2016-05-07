@@ -1,0 +1,22 @@
+{
+  "name": "AWS-Node-freebasic-chess",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Faxn/AWS-Node-freebasic-chess.git"
+  },
+  "author": "",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/Faxn/AWS-Node-freebasic-chess/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.4",
+    "serve-static": "~1.10.2"
+  }
+}
