@@ -189,4 +189,4 @@ function validMove(ptype, orig, dest, player, mailbox){
    }
     
     }
-}exports.verify = Verify;
+exports.verify = Verify;
