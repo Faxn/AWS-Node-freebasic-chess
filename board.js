@@ -29,7 +29,7 @@ var mailbox = function () {
        this.init = function(){
            
            for(i=0; i<8; i++){
-              this.arr[i]=129; //black pawn
+              this.arr[i+48]=129; //black pawn
               this.arr[i+8]=1; //white pawn
               this.arr[i+56] = back[i]+128; //black rank
               this.arr[i] = back[i];        //white rank
