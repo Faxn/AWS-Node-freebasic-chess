@@ -1,88 +1,159 @@
 <!DOCTYPE html>
 <html>
-<head>
-<link rel="stylesheet" type="text/css" media="all" href="chess.css">
+	<head>
+		<link rel="stylesheet" type="text/css" href="chessTable.css">
+		<link rel="stylesheet" type="text/css" href="chess.css">
 </head>
 <body>
+<!--form action=""-->
+<!--div style="width: 25%;padding-bottom: 25%;background-color: #aaa; float: left;margin: 5%;"> <input type="checkbox" name="vehicle" value="Pawn"-->
 
-<p>Hello world</p>
-<form action="">
-<div style="width: 25%;padding-bottom: 25%;background-color: #aaa; float: left;margin: 5%;"> <input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
+<div id = "chessDesk">
+	<div id = "chessboardBox">
+		<div id = "chess2dBox" style = "height:512px; width:512px;">
+		  <table id = "flatChessboard" style = "width: 500px; height: 500px; margin-bottom: 6px; margin-top: 6px">
+			<tbody>
+				<tr>
+				<td class = "boardAngle"></td>
+				<th class = "horizCoords">a</th>
+				<th class = "horizCoords">b</th>
+				<th class = "horizCoords">c</th>
+				<th class = "horizCoords">d</th>
+				<th class = "horizCoords">e</th>
+				<th class = "horizCoords">f</th>		
+				<th class = "horizCoords">g</th>
+				<th class = "horizCoords">h</th>
+				<td class = "boardAngle"></td>
+				</tr>
 
-<input class="white-box" type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-<input type="checkbox" name="vehicle" value="Pawn">
-    </div>
-    </form>
-<form>
-<div class= "Board">
+				<tr>
+				<th class = "vertCoords">8</th>
+				<td class = "whiteSquares" id="flatSq91"></td>
+				<td class = "blackSquares" id="flatSq92"></td>
+				<td class = "whiteSquares" id="flatSq93"></td>
+				<td class = "blackSquares" id="flatSq94"></td>
+				<td class = "whiteSquares" id="flatSq95"></td>
+				<td class = "blackSquares" id="flatSq96"></td>
+				<td class = "whiteSquares" id="flatSq97"></td>
+				<td class = "blackSquares" id="flatSq98"></td>
+				<th class = "vertCoords">8</th>
+				</tr>
 
-<div class= "white-space"><input class="check" type="checkbox" name="vehicle" value="Rook"></div>
-<div class= "black-space"><input class="check" type="checkbox" name="vehicle" value="Knight"></div>
-    
-    
+				<tr>
+				<th class = "vertCoords">7</th>
+				<td class = "blackSquares" id="flatSq81"></td>
+				<td class = "whiteSquares" id="flatSq82"></td>
+				<td class = "blackSquares" id="flatSq83"></td>
+				<td class = "whiteSquares" id="flatSq84"></td>
+				<td class = "blackSquares" id="flatSq85"></td>
+				<td class = "whiteSquares" id="flatSq86"></td>
+				<td class = "blackSquares" id="flatSq87"></td>
+				<td class = "whiteSquares" id="flatSq88"></td>
+				<th class = "vertCoords">7</th>
+				</tr>
+
+				<tr>
+				<th class = "vertCoords">6</th>
+				<td class = "whiteSquares" id="flatSq61"></td>
+				<td class = "blackSquares" id="flatSq62"></td>
+				<td class = "whiteSquares" id="flatSq63"></td>
+				<td class = "blackSquares" id="flatSq64"></td>
+				<td class = "whiteSquares" id="flatSq65"></td>
+				<td class = "blackSquares" id="flatSq66"></td>
+				<td class = "whiteSquares" id="flatSq67"></td>
+				<td class = "blackSquares" id="flatSq68"></td>
+				<th class = "vertCoords">6</th>
+				</tr>
+
+				<tr>
+				<th class = "vertCoords">5</th>
+				<td class = "blackSquares" id="flatSq81"></td>
+				<td class = "whiteSquares" id="flatSq82"></td>
+				<td class = "blackSquares" id="flatSq83"></td>
+				<td class = "whiteSquares" id="flatSq84"></td>
+				<td class = "blackSquares" id="flatSq85"></td>
+				<td class = "whiteSquares" id="flatSq86"></td>
+				<td class = "blackSquares" id="flatSq87"></td>
+				<td class = "whiteSquares" id="flatSq88"></td>
+				<th class = "vertCoords">5</th>
+				</tr>
+
+				<tr>
+				<th class = "vertCoords">4</th>
+				<td class = "whiteSquares" id="flatSq41"></td>
+				<td class = "blackSquares" id="flatSq42"></td>
+				<td class = "whiteSquares" id="flatSq43"></td>
+				<td class = "blackSquares" id="flatSq44"></td>
+				<td class = "whiteSquares" id="flatSq45"></td>
+				<td class = "blackSquares" id="flatSq46"></td>
+				<td class = "whiteSquares" id="flatSq47"></td>
+				<td class = "blackSquares" id="flatSq48"></td>
+				<th class = "vertCoords">4</th>
+				</tr>
+
+				<tr>
+				<th class = "vertCoords">3</th>
+				<td class = "blackSquares" id="flatSq81"></td>
+				<td class = "whiteSquares" id="flatSq82"></td>
+				<td class = "blackSquares" id="flatSq83"></td>
+				<td class = "whiteSquares" id="flatSq84"></td>
+				<td class = "blackSquares" id="flatSq85"></td>
+				<td class = "whiteSquares" id="flatSq86"></td>
+				<td class = "blackSquares" id="flatSq87"></td>
+				<td class = "whiteSquares" id="flatSq88"></td>
+				<th class = "vertCoords">3</th>
+				</tr>
+
+				<tr>
+				<th class = "vertCoords">2</th>
+				<td class = "whiteSquares" id="flatSq21"></td>
+				<td class = "blackSquares" id="flatSq22"></td>
+				<td class = "whiteSquares" id="flatSq23"></td>
+				<td class = "blackSquares" id="flatSq24"></td>
+				<td class = "whiteSquares" id="flatSq25"></td>
+				<td class = "blackSquares" id="flatSq26"></td>
+				<td class = "whiteSquares" id="flatSq27"></td>
+				<td class = "blackSquares" id="flatSq28"></td>
+				<th class = "vertCoords">2</th>
+				</tr>
+
+				<tr>
+				<th class = "vertCoords">1</th>
+				<td class = "blackSquares" id="flatSq81"></td>
+				<td class = "whiteSquares" id="flatSq82"></td>
+				<td class = "blackSquares" id="flatSq83"></td>
+				<td class = "whiteSquares" id="flatSq84"></td>
+				<td class = "blackSquares" id="flatSq85"></td>
+				<td class = "whiteSquares" id="flatSq86"></td>
+				<td class = "blackSquares" id="flatSq87"></td>
+				<td class = "whiteSquares" id="flatSq88"></td>
+				<th class = "vertCoords">1</th>
+				</tr>
+
+				<tr>
+				<td class = "boardAngle"></td>
+				<th class = "horizCoords">a</th>
+				<th class = "horizCoords">b</th>
+				<th class = "horizCoords">c</th>
+				<th class = "horizCoords">d</th>
+				<th class = "horizCoords">e</th>
+				<th class = "horizCoords">f</th>		
+				<th class = "horizCoords">g</th>
+				<th class = "horizCoords">h</th>
+				<td class = "boardAngle"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+  </div>
 </div>
-</form>
+<!--form id = "check"-->
+<!--div class= "Board"-->
 
+<!--div class= "white-space"><input class="check" type="checkbox" name="vehicle" value="Rook"-->
+<!--div class= "black-space"><input class="check" type="checkbox" name="vehicle" value="Knight"-->
+    
+<!--/form-->
 
 </body>
 </html>
