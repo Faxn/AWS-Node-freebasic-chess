@@ -26,6 +26,7 @@ app.use(serveStatic('static/'));
 
 boards = [];
 boards[1] = new board.mailbox();
+boards[1].init();
 
 //serve the index
 indexhb = fs.readFileSync('templates/index.html', "utf-8")
@@ -42,14 +43,16 @@ app.get("/", function(req, res){
 })
 
 //serve the play pages
-playhb =fs.readFileSync('templates/simple_play.html', 'utf-8')
-playtem = handlebars.compile(playhb) 
+
 
 app.get("/view/:game/:player", function(req, res){
+
+playhb = fs.readFileSync('chess.html', 'utf-8')
+playtem = handlebars.compile(playhb) 
+
 	console.log(req.params.game)
 	console.log(req.params.player)
 
-	
 	html=playtem(board)
 	res.send(html)
 })

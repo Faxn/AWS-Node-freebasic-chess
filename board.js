@@ -21,6 +21,22 @@ var mailbox = function () {
        this.foo = function(){
            return "bar"
        }
+
+       
+       /** Set the board to the traditional chess starting position.
+        */
+       back = [4,2,3,6,5,3,2,4]
+       this.init = function(){
+           
+           for(i=0; i<8; i++){
+              this.arr[i]=129; //black pawn
+              this.arr[i+8]=1; //white pawn
+              this.arr[i+56] = back[i]+128; //black rank
+              this.arr[i] = back[i];        //white rank
+           }
+	
+
+       }
 }
 
 exports.mailbox = mailbox;
