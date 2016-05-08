@@ -10,12 +10,12 @@ exports.king = 5;
 exports.queen = 6;
 
 unicode = {
-    1:'\u265F',
-    2:'\u265E',
-    3:'\u265D',
-    4:'\u265C',
-    5:'\u265A',
-    6:'\u265B',
+    1:'\u2569',
+    2:'\u2658',
+    3:'\u2657',
+    4:'\u2656',
+    5:'\u2654',
+    6:'\u2655',
 }
 
 unicode_html = {5:9812,
@@ -27,7 +27,6 @@ unicode_html = {5:9812,
 	   }
 offset = 6;
 exports.toUnicode= function(piece){
-    console.log("peice value"+piece);
     if(piece == 0){
         
 	return '\u0000'
