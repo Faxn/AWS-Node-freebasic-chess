@@ -51,13 +51,20 @@ app.get("/view/:game/:player", function(req, res){
         playtem = handlebars.compile(playhb) 
 
 	data={}
-	data.board = board;
-        data.selected = 0
-	data.game = req.params.game
+        data.selected = req.query.square == undefined ? false : req.query.square;
+	data.game = parseInt(req.params.game)
+	data.board = boards[data.game]
 	data.player = req.params.player
+        data.piece = []
+	for(i = 0; i<64; i++){
+	   data.piece[i]=pieces.toUnicode(data.board.arr[i]);
+	}
 
 	console.dir(req.params)
 	console.dir(req.body)
+	console.dir(req.query)
+        console.log("data")
+	console.dir(data)
 
 	html=playtem(data)
 	res.send(html)
