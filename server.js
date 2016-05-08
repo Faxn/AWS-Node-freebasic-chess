@@ -47,13 +47,19 @@ app.get("/", function(req, res){
 
 app.get("/view/:game/:player", function(req, res){
 
-playhb = fs.readFileSync('chess.html', 'utf-8')
-playtem = handlebars.compile(playhb) 
+        playhb = fs.readFileSync('chess.html', 'utf-8')
+        playtem = handlebars.compile(playhb) 
 
-	console.log(req.params.game)
-	console.log(req.params.player)
+	data={}
+	data.board = board;
+        data.selected = 0
+	data.game = req.params.game
+	data.player = req.params.player
 
-	html=playtem(board)
+	console.dir(req.params)
+	console.dir(req.body)
+
+	html=playtem(data)
 	res.send(html)
 })
 
