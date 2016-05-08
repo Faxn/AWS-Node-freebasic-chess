@@ -53,12 +53,6 @@ function validMove(ptype, orig, dest){
     else if (ptype == 6){
         
     }
-    else if (ptype == 7){
-        
-    }
-    else if (ptype == 8){
-        
-    }
+
     
-}
-exports.verify = Verify();
+}exports.verify = Verify();
