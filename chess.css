@@ -1,5 +1,13 @@
 /*This is for the chess board bg */
 
+#chessDesk {
+	clear: both;
+	width: auto;
+	height: auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
 #chessboardsBox {
 	position: relative;
 	margin-left: auto;
@@ -13,6 +21,8 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	width:512px;
+	height:512px;
 	/*
 	-moz-box-shadow:
 		0 0 20px black,
@@ -63,6 +73,8 @@
 	* height: [DYNAMIC VALUE];
 	*/
 	float: right;
+	height:512px;
+	width:512px;
 }
 #chessCtrlPanel, #chessCtrlPanel select, #chessCtrlPanel input[type=text] {
 	-moz-border-radius: 5px;
