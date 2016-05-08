@@ -32,3 +32,7 @@ function Verify(Player, SC1, SC2, mailbox){
     }
     
 }
+
+
+exports.verify = Verify();
+

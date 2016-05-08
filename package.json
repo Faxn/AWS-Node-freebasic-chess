@@ -18,6 +18,7 @@
   "dependencies": {
     "express": "~4.13.4",
     "serve-static": "~1.10.2",
-    "handlebars": "~4.0.5"
+    "handlebars": "~4.0.5",
+    "body-parser": "~1.15.1"
   }
 }
