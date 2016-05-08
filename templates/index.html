@@ -1,6 +1,9 @@
 
-<pre>{{motd}}</pre>
-<h2>Game 1</h2>
- <a href='view/1/white'> white player</a> <br>
- <a href='view/1/black'> black player</a>  
+{{#each blist}}
+<h2>Game {{this}}</h2>
+ <a href='view/{{this}}/white'> white player</a> <br>
+ <a href='view/{{this}}/black'> black player</a>  
+{{/each}}
 
+
+<form action=newgame method=post>

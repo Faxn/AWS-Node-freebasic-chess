@@ -22,14 +22,22 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //host static files.
 app.use(serveStatic('static/'));
 
-//setup the global board
-board = new board.mailbox();
+//setup the global board array
+
+boards = [];
+boards[1] = new board.mailbox();
 
 //serve the index
 indexhb = fs.readFileSync('templates/index.html', "utf-8")
 indextem = handlebars.compile(indexhb)
 app.get("/", function(req, res){
-    html = indextem({motd:"handlebars"})
+    blist = [];
+    for(k in boards){
+	blist[blist.length] = k
+    }
+    data = {};
+    data.blist = blist;
+    html = indextem(data)
     res.send(html)
 })
 
@@ -40,11 +48,11 @@ playtem = handlebars.compile(playhb)
 app.get("/view/:game/:player", function(req, res){
 	console.log(req.params.game)
 	console.log(req.params.player)
+
+	
 	html=playtem(board)
 	res.send(html)
 })
-
-
 
 app.post("/play/:game/:player",function(req, res){
 	s1=req.body.s1;

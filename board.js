@@ -11,17 +11,25 @@
 
 var mailbox = function () {
 	this.arr = [ 0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0,
-                           0,0,0,0,0,0,0,0]
+                     0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0,
+                     0,0,0,0,0,0,0,0]
        this.foo = function(){
            return "bar"
        }
-
 }
 
 exports.mailbox = mailbox;
+
+exports.getRank = function(idx){
+    return idx/8;
+}
+
+exports.getFile = function(idx){
+    return idx % 8;
+}
+
