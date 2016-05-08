@@ -16,15 +16,15 @@ unicode = {
     4:'\u2656',
     5:'\u2654',
     6:'\u2655',
+    129:'\u265f',
+    130:'\u265e',
+    131:'\u265d',
+    132:'\u265c',
+    133:'\u265a',
+    134:'\u255b',
 }
 
-unicode_html = {5:9812,
-           6:9813,
-           4:9814,
-           3:9815,
-           2:9816,
-           1:9817
-	   }
+
 offset = 6;
 exports.toUnicode= function(piece){
     console.log("peice value"+piece);
@@ -32,10 +32,8 @@ exports.toUnicode= function(piece){
         
 	return '\u0000'
     }
-    piece = unicode[piece & 127]
-    if(piece & 128 > 0){
-       piece = piece + offset
-    }
+    piece = unicode[piece]
+
     return piece;
 }
 //meaningless comment
