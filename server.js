@@ -93,7 +93,9 @@ app.post("/view/:game/:player",function(req, res){
 	}
 
 	console.log("Some fool tried to move from "+s1+" to "+s2);
-	res.send("Some fool tried to move from "+s1+"("+req.body.selected+") to "+s2)
+	
+	//post redirect
+	res.redirect(303, '/view/'+req.params.game+'/'+req.params.player)
 })
 
 //host the server
