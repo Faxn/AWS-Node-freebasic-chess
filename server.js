@@ -4,8 +4,9 @@ var http = require('http'),
     fs = require('fs'),
     handlebars = require('handlebars'),
     pieces = require('./pieces.js'),
-    board = require('./board.js')
-
+    board = require('./board.js'),
+    verify = require('./verify.js')
+ 
 // configure the app
 var app = express();
 
@@ -92,7 +93,13 @@ app.post("/view/:game/:player",function(req, res){
 	   }
 	}
 
-	console.log("Some fool tried to move from "+s1+" to "+s2);
+	pl = req.params.player == 'white' ? 0 : 1;
+
+	ver = verify.verify(pl, s1, s2, boards[parseInt(req.params.game)])
+	console.log("Some fool tried to move from "+s1+" to "+s2+". It went "+ver);
+
+	//ignore what verify says, all moves are leagal.
+	verify.commit(null, s1, s2, null, boards[parseInt(req.params.game)]);
 	
 	//post redirect
 	res.redirect(303, '/view/'+req.params.game+'/'+req.params.player)
