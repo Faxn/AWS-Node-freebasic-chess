@@ -170,8 +170,22 @@ function validMove(ptype, orig, dest, player, mailbox){
         if (player == 1){
             ptype = ptype + 128;
         }
+        if ((mailbox[dest] == 5) || (mailbox[dest] == 133)){
+            if (player == 0){
+                player == "White";
+            }
+            else {
+                player == "Black";
+            }
+            }
+            winner = player;
+            gameover = 1;
+        }
         mailbox[dest] = ptype;
         mailbox[orig] = 0;
+        if (gameover == 1){
+            return player +" Player is the winner!";
+        }
    }
     
     }
