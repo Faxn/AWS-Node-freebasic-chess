@@ -9,7 +9,16 @@ exports.rook = 4;
 exports.king = 5;
 exports.queen = 6;
 
-unicode = {5:9812,
+unicode = {
+    1:'\u2569',
+    2:'\u2658',
+    3:'\u2657',
+    4:'\u2656',
+    5:'\u2654',
+    6:'\u2655',
+}
+
+unicode_html = {5:9812,
            6:9813,
            4:9814,
            3:9815,
@@ -25,5 +34,5 @@ exports.toUnicode= function(piece){
     if(piece & 128 > 0){
        piece = piece + offset
     }
-    return "&#"+piece;
+    return piece;
 }
