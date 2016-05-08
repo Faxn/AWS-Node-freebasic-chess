@@ -4,8 +4,8 @@ var http = require('http'),
     fs = require('fs'),
     handlebars = require('handlebars'),
     pieces = require('./pieces.js'),
-    board = require('./board.js'),
-    verify = require('./verify.js')
+    board = require('./board.js')
+    //verify = require('./verify.js')
  
 // configure the app
 var app = express();
@@ -85,7 +85,7 @@ app.post("/view/:game/:player",function(req, res){
 	s1=parseInt(req.body.selected);
 
 	//figure out the index
-	s2 = false
+	s2 = undefined
 	for(i = 0; i<64; i++){ //jank
 	   if(req.body["square"+i] != undefined){ //JANK
 	      s2 = i;   //JAAAAAANK
@@ -95,11 +95,17 @@ app.post("/view/:game/:player",function(req, res){
 
 	pl = req.params.player == 'white' ? 0 : 1;
 
-	ver = verify.verify(pl, s1, s2, boards[parseInt(req.params.game)])
-	console.log("Some fool tried to move from "+s1+" to "+s2+". It went "+ver);
+	//ver = verify.verify(pl, s1, s2, boards[parseInt(req.params.game)])
+	//console.log("Some fool tried to move from "+s1+" to "+s2+". It went "+ver);
 
 	//ignore what verify says, all moves are leagal.
-	verify.commit(null, s1, s2, null, boards[parseInt(req.params.game)]);
+	//verify.commit(null, s1, s2, null, boards[parseInt(req.params.game)]);
+
+	//verify can't commit, lets just do it ourselves.
+	console.log(s1+"->"+s2+" on "+req.params.game)
+	mb = boards[parseInt(req.params.game)]
+	mb.arr[s2] = mb.arr[s1]
+	mb.arr[s1] = 0
 	
 	//post redirect
 	res.redirect(303, '/view/'+req.params.game+'/'+req.params.player)

@@ -191,19 +191,16 @@ function validMove(type, origin, destination, Player, mailbox){
        return commitMove(type, origin, destination, Player, mailbox);
     }
     
-   }
+   
    
 }
 
+exports.verify = Verify;
+/**
 
-var CommitMove = function(type, orig, destination, Player, mailbox){
-                console.log("Write Success");
-
-        if (Player == 1){
-            type = type + 128;
-        }
-     
-        mailbox.arr[destination] = type;
+CommitMove = function(orig, destination, Player, mailbox){
+        
+        mailbox.arr[destination] = mailbox.arr[orig];
         mailbox.arr[origin] = 0;
         console.log("Write Success");
         return true;
@@ -212,5 +209,6 @@ var CommitMove = function(type, orig, destination, Player, mailbox){
 
 
 exports.commit = CommitMove;
-exports.verify = Verify;
+
+*/
 
