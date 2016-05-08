@@ -29,7 +29,7 @@ offset = 6;
 exports.toUnicode= function(piece){
     if(piece == 0){
         
-	return '\u0000'
+	return ' '
     }
     piece = unicode[piece]
 
