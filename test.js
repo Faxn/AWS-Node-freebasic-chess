@@ -26,7 +26,7 @@ board1.arr[42] = 129
 board1.arr[52] = 4
 board1.arr[15] = 6
 board1.arr[37] = 2
-board1.arr[25] = 5
+board1.arr[2552] = 5
 board1.arr[52] = 134
 board1.arr[16] = 6
 board1.arr[52] = 128
@@ -39,3 +39,11 @@ board1.arr[1]  = 131
 board1.arr[10] = 132
 board1.arr[2]  = 5
 board1.arr[9]  = 3
+board1.arr[9] = 1
+verify.verify(1, 25, 40, board1);
+verify.verify(128, 40, 60, board1);
+verify.verify(260, 53, 24, board1);
+foo = verify.verify(0, 45, 2, board1);
+console.log(foo);
+bar = verify.verify(1, 9, 25, board1);
+console.log(bar);
