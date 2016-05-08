@@ -11,7 +11,8 @@
 <div id = "chessDesk">
 	<div id = "chessboardBox">
 		<div id = "chess2dBox" style = "height:512px; width:512px;">
-		<form action = "/view/{{game}}/{{player}}" method="get">
+		<form action = "/view/{{game}}/{{player}}" method={{#if selected}}"post"{{else}}"get"{{/if}}>
+		<input class='hidden' type='text' name='selected' value={{selected}} >
 		  <table id = "flatChessboard" style = "width: 500px; height: 500px; margin-bottom: 6px; margin-top: 6px">
 			<tbody>
 				<tr>
@@ -107,8 +108,8 @@
 
 				<tr>
 				<th class = "vertCoords">2</th>
-				<td class = "whiteSquares" id="flatSq31"><input type="submit" name="square08" value={{piece.[08]}}></td>
-				<td class = "blackSquares" id="flatSq32"><input type="submit" name="square09" value={{piece.[09]}}></td>
+				<td class = "whiteSquares" id="flatSq31"><input type="submit" name="square8" value={{piece.[8]}}></td>
+				<td class = "blackSquares" id="flatSq32"><input type="submit" name="square9" value={{piece.[9]}}></td>
 				<td class = "whiteSquares" id="flatSq33"><input type="submit" name="square10" value={{piece.[10]}}></td>
 				<td class = "blackSquares" id="flatSq34"><input type="submit" name="square11" value={{piece.[11]}}></td>
 				<td class = "whiteSquares" id="flatSq35"><input type="submit" name="square12" value={{piece.[12]}}></td>
@@ -120,14 +121,14 @@
 
 				<tr>
 				<th class = "vertCoords">1</th>
-				<td class = "blackSquares" id="flatSq21"><input type="submit" name="square00" value={{piece.[00]}}></td>
-				<td class = "whiteSquares" id="flatSq22"><input type="submit" name="square01" value={{piece.[01]}}></td>
-				<td class = "blackSquares" id="flatSq23"><input type="submit" name="square02" value={{piece.[02]}}></td>
-				<td class = "whiteSquares" id="flatSq24"><input type="submit" name="square03" value={{piece.[03]}}></td>
-				<td class = "blackSquares" id="flatSq25"><input type="submit" name="square04" value={{piece.[04]}}></td>
-				<td class = "whiteSquares" id="flatSq26"><input type="submit" name="square05" value={{piece.[05]}}></td>
-				<td class = "blackSquares" id="flatSq27"><input type="submit" name="square06" value={{piece.[06]}}></td>
-				<td class = "whiteSquares" id="flatSq28"><input type="submit" name="square07" value={{piece.[07]}}></td>
+				<td class = "blackSquares" id="flatSq21"><input type="submit" name="square0" value={{piece.[0]}}></td>
+				<td class = "whiteSquares" id="flatSq22"><input type="submit" name="square1" value={{piece.[1]}}></td>
+				<td class = "blackSquares" id="flatSq23"><input type="submit" name="square2" value={{piece.[2]}}></td>
+				<td class = "whiteSquares" id="flatSq24"><input type="submit" name="square3" value={{piece.[3]}}></td>
+				<td class = "blackSquares" id="flatSq25"><input type="submit" name="square4" value={{piece.[4]}}></td>
+				<td class = "whiteSquares" id="flatSq26"><input type="submit" name="square5" value={{piece.[5]}}></td>
+				<td class = "blackSquares" id="flatSq27"><input type="submit" name="square6" value={{piece.[6]}}></td>
+				<td class = "whiteSquares" id="flatSq28"><input type="submit" name="square7" value={{piece.[7]}}></td>
 				<th class = "vertCoords">1</th>
 				</tr>
 

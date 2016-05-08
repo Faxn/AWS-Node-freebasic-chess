@@ -50,8 +50,18 @@ app.get("/view/:game/:player", function(req, res){
         playhb = fs.readFileSync('chess.html', 'utf-8')
         playtem = handlebars.compile(playhb) 
 
+	//figure out the index
+	selected = false
+	for(i = 0; i<64; i++){ //jank
+	   if(req.query["square"+i] != undefined){ //JANK
+	      selected = i;   //JAAAAAANK
+	      break;
+	   }
+	}
+
+	//build the data glob for handlebars
 	data={}
-        data.selected = req.query.square == undefined ? false : req.query.square;
+        data.selected = selected;
 	data.game = parseInt(req.params.game)
 	data.board = boards[data.game]
 	data.player = req.params.player
@@ -70,11 +80,20 @@ app.get("/view/:game/:player", function(req, res){
 	res.send(html)
 })
 
-app.post("/play/:game/:player",function(req, res){
-	s1=req.body.s1;
-	s2=req.body.s2;
+app.post("/view/:game/:player",function(req, res){
+	s1=parseInt(req.body.selected);
+
+	//figure out the index
+	s2 = false
+	for(i = 0; i<64; i++){ //jank
+	   if(req.body["square"+i] != undefined){ //JANK
+	      s2 = i;   //JAAAAAANK
+	      break;
+	   }
+	}
+
 	console.log("Some fool tried to move from "+s1+" to "+s2);
-	res.send(500)
+	res.send("Some fool tried to move from "+s1+"("+req.body.selected+") to "+s2)
 })
 
 //host the server
