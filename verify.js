@@ -23,12 +23,41 @@ function Verify(Player, SC1, SC2, mailbox){
         destination = SC1;
      
     }
+    validMove(type, origin, destination);
    
     
     }
     else 
     {
     return "Invalid Move.";
+    }
+    
+}
+
+function validMove(ptype, orig, dest){
+    if ptype == 1{
+        
+    }
+    else if ptype == 2{
+        
+    }
+    else if ptype == 3{
+        
+    }
+    else if ptype == 4{
+        
+    }
+    else if ptype == 5{
+        
+    }
+    else if ptype == 6{
+        
+    }
+    else if ptype == 7{
+        
+    }
+    else if ptype == 8{
+        
     }
     
 }
