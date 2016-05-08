@@ -1,7 +1,7 @@
 /*This is for the chess board bg */
 
 .hidden{
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 
 #chessDesk {
