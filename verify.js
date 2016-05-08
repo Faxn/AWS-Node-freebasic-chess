@@ -23,7 +23,7 @@ function Verify(Player, SC1, SC2, mailbox){
         destination = SC1;
      
     }
-    validMove(type, origin, destination);
+    validMove(type, origin, destination, Player, mailbox);
    
     
     }
@@ -34,7 +34,16 @@ function Verify(Player, SC1, SC2, mailbox){
     
 }
 
-function validMove(ptype, orig, dest){
+function validMove(ptype, orig, dest, player, mailbox){
+    if (orig > dest){
+         min = dest;
+         max = orig;
+    }
+    else {
+        min = orig;
+        max = dest;
+    }
+    travel = max - min;
     if (ptype == 1){
         
     }
@@ -42,6 +51,17 @@ function validMove(ptype, orig, dest){
         
     }
     else if (ptype == 3){
+        if ((travel % 9 == 0))
+        {
+            increment = 9;
+        }
+        else if (travel % 7 == 0){
+            increment = 7          
+        }
+        else 
+        {
+            return "Invalid Move.";
+        }
         
     }
     else if (ptype == 4){
@@ -53,6 +73,27 @@ function validMove(ptype, orig, dest){
     else if (ptype == 6){
         
     }
-
+    travelTrace(min, max, increment, player, mailbox, dest, origin, ptype);
     
-}exports.verify = Verify();
+
+    function travelTrace(min, max, increment, player, mailbox, dest, origin, ptype){
+        min = min + increment;
+        while (min < max){
+            if (mailbox[min] != 0){
+                return "Invalid Move";
+            }
+            min = min + increment;
+        }
+        commitMove(ptype, origin, dest, player, mailbox);
+    }
+    
+   
+    function commitMove(ptype, orig, dest, player, mailbox){
+        if (player == 1){
+            ptype = ptype + 128;
+        }
+        mailbox[dest] = ptype;
+        mailbox[orig] = 0;
+   }
+    
+}exports.verify = Verify;
