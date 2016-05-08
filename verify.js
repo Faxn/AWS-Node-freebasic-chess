@@ -1,6 +1,6 @@
 var board = require("./board.js");
 function Verify(Player, SC1, SC2, mailbox){
-   
+
     vOne = Math.floor(mailbox.arr[SC1] / 128);
     vTwo = Math.floor(mailbox.arr[SC2] / 128);
     xorOne = Boolean(Player == vOne);
@@ -39,7 +39,7 @@ function Verify(Player, SC1, SC2, mailbox){
     }
     else 
     {
-    return false;
+    return false+"01";
     }
  
         
@@ -64,7 +64,7 @@ function validMove(type, origin, destination, Player, mailbox){
         if (travel == 16){
             
            if (((origin <= 7)) || ((origin >= 16) && (origin <= 47)) || (origin >= 56)){
-               return false
+               return false+"02";
                
            }
            else {
@@ -75,7 +75,8 @@ function validMove(type, origin, destination, Player, mailbox){
            }
           else if ((travel == 8)){
               if (mailbox.arr[destination] != 0){
-                  return false
+                  return false+"04";
+                 
               }
               else {increment = 8;}
           }
@@ -173,11 +174,11 @@ function validMove(type, origin, destination, Player, mailbox){
                 return false;
              }
 
-        }
+  
         }
         
    return travelTrace(min, max, increment, Player, mailbox, destination, origin, type);
-    
+    }
 
     function travelTrace(min, max, increment, Player, mailbox, destination, origin, type){
         min = min + increment;
@@ -204,6 +205,5 @@ function validMove(type, origin, destination, Player, mailbox){
         return true;
         }
    }
-    
 }
 exports.verify = Verify;
