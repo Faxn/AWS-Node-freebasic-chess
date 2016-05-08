@@ -10,6 +10,14 @@
 	border-collapse: collapse;
 	border: 0;
 }
+
+input {
+	background:transparent;
+	width:100%;
+	height:100%;
+	font-size:larger;
+}
+
 #flatChessboard tr td.blackSquares, #flatChessboard tr td.whiteSquares {
 	width: 11%;
 	height: 11%;
