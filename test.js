@@ -45,5 +45,5 @@ verify.verify(128, 40, 60, board1);
 verify.verify(260, 53, 24, board1);
 foo = verify.verify(0, 45, 2, board1);
 console.log(foo);
-bar = verify.verify(0, 9, 25, board1);
+bar = verify.verify(1, 9, 25, board1);
 console.log(bar);
