@@ -11,6 +11,7 @@
 <div id = "chessDesk">
 	<div id = "chessboardBox">
 		<div id = "chess2dBox" style = "height:512px; width:512px;">
+		<form action = "/view/{{game}}/{{player}}" method="get">
 		  <table id = "flatChessboard" style = "width: 500px; height: 500px; margin-bottom: 6px; margin-top: 6px">
 			<tbody>
 				<tr>
@@ -28,11 +29,11 @@
 
 				<tr>
 				<th class = "vertCoords">8</th>
-                <td class = "whiteSquares" id="flatSq91"><button id="56">56</button></td>
+                <td class = "whiteSquares" id="flatSq91"><input type="submit" value="56"><input type = "submit" value = "Submit"></td>
                 <td class = "blackSquares" id="flatSq92"><button id="57">57</button></td>
 				<td class = "whiteSquares" id="flatSq93"><button id="58">58</button></td>
 				<td class = "blackSquares" id="flatSq94"><button id="59">59</button></td>
-                    <td class = "whiteSquares" id="flatSq95"><button id="60">60</button></td>
+                <td class = "whiteSquares" id="flatSq95"><button id="60">60</button></td>
 				<td class = "blackSquares" id="flatSq96"><button id="61">61</button></td>
 				<td class = "whiteSquares" id="flatSq97"><button id="62">62</button></td>
 				<td class = "blackSquares" id="flatSq98"><button id="63">63</button></td>
@@ -143,6 +144,7 @@
 				<td class = "boardAngle"></td>
 				</tr>
 			</tbody>
+		 </form>
 		</table>
 	</div>
   </div>
