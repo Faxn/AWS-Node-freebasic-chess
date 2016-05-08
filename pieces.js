@@ -10,7 +10,7 @@ exports.king = 5;
 exports.queen = 6;
 
 unicode = {
-    1:'\u2569',
+    1:'\u2659',
     2:'\u2658',
     3:'\u2657',
     4:'\u2656',
@@ -27,8 +27,10 @@ unicode_html = {5:9812,
 	   }
 offset = 6;
 exports.toUnicode= function(piece){
+    console.log("peice value"+piece);
     if(piece == 0){
-	return " "
+        
+	return '\u0000'
     }
     piece = unicode[piece & 127]
     if(piece & 128 > 0){
