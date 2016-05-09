@@ -2,7 +2,7 @@
   "name": "AWS-Node-freebasic-chess",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "https://github.com/Faxn/AWS-Node-freebasic-chess.git"
   },
-  "author": "",
-  "license": "GPL3",
+  "contributors": ["Jaquan Webster", "Jared Stern", "Blake Curry", "Zachary Phillips", "JunhyunAn"],
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/Faxn/AWS-Node-freebasic-chess/issues"
   },

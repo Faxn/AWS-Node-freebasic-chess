@@ -2,6 +2,8 @@
 
 from the project directory run:
 
-npm install
-node server.js
+<pre>
+	npm install
+	node server.js
+</pre>
 
